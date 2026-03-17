@@ -7,120 +7,126 @@
   <title>Regulação | Orvya</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
   <!-- HEADER -->
-  <header class="header" id="header">
+  <header class="header" id="header" role="banner">
     <div class="container">
-      <a href="index.html" class="logo">Orvya</a>
-      <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="logo" aria-label="Orvya — página inicial">Orvya</a>
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Navegação principal">
         <a href="quem-somos.html">Quem Somos</a>
         <a href="como-funciona.html">Como Funciona</a>
-        <a href="regulacao.html" class="active">Regulação</a>
+        <a href="regulacao.html" class="active" aria-current="page">Regulação</a>
         <a href="fale-conosco.html">Fale Conosco</a>
         <span class="nav-cta">
           <a href="fale-conosco.html" class="btn btn--primary">Falar com especialista</a>
         </span>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <div class="container fade-up">
-      <span class="section-label">Compliance</span>
-      <h1>Regulação</h1>
-      <p>Informações institucionais, documentos e detalhes sobre a atuação regulada da Orvya.</p>
-    </div>
-  </section>
+  <main id="main-content">
 
-  <!-- INFORMAÇÕES INSTITUCIONAIS -->
-  <section class="section">
-    <div class="container">
-      <div class="regulation-info">
-        <div class="regulation-block fade-up">
-          <h3>Informações institucionais</h3>
-          <p><strong>Orvya Consultoria de Investimentos Ltda</strong></p>
-          <p>CNPJ: 65.609.925/0001-80</p>
-          <p style="margin-top:16px;">Para dúvidas, solicitações de informações ou comunicações relacionadas às atividades de consultoria de valores mobiliários, entre em contato pelo e-mail:</p>
-          <p style="margin-top:8px;"><a href="mailto:contato@orvyainvestimentos.com.br">contato@orvyainvestimentos.com.br</a></p>
-        </div>
+    <!-- PAGE HEADER -->
+    <section class="page-header" aria-labelledby="page-title">
+      <div class="container fade-up">
+        <span class="section-label">Compliance</span>
+        <h1 id="page-title">Regulação</h1>
+        <p>Informações institucionais, documentos e detalhes sobre a atuação regulada da Orvya.</p>
+      </div>
+    </section>
 
-        <div class="regulation-block fade-up delay-1" id="documentos">
-          <h3>Documentos</h3>
-          <p>Os documentos institucionais da Orvya podem ser acessados nos links abaixo.</p>
-          <div class="docs-list">
-            <a href="#">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Formulário de referência
-            </a>
-            <a href="#">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Manual de Compliance
-            </a>
-            <a href="#">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              Política de Privacidade e Proteção de Dados (LGPD)
-            </a>
+    <!-- INFORMAÇÕES INSTITUCIONAIS -->
+    <section class="section" aria-labelledby="info-title">
+      <div class="container">
+        <div class="regulation-info">
+          <div class="regulation-block fade-up">
+            <h3 id="info-title">Informações institucionais</h3>
+            <p><strong>Orvya Consultoria de Investimentos Ltda</strong></p>
+            <p>CNPJ: 65.609.925/0001-80</p>
+            <p style="margin-top: var(--space-4);">Para dúvidas, solicitações de informações ou comunicações relacionadas às atividades de consultoria de valores mobiliários, entre em contato pelo e-mail:</p>
+            <p style="margin-top: var(--space-2);"><a href="mailto:contato@orvyainvestimentos.com.br">contato@orvyainvestimentos.com.br</a></p>
+          </div>
+
+          <div class="regulation-block fade-up delay-1" id="documentos">
+            <h3>Documentos</h3>
+            <p>Os documentos institucionais da Orvya podem ser acessados nos links abaixo.</p>
+            <nav class="docs-list" aria-label="Documentos institucionais">
+              <a href="#" aria-label="Baixar Formulário de referência">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Formulário de referência
+              </a>
+              <a href="#" aria-label="Baixar Manual de Compliance">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Manual de Compliance
+              </a>
+              <a href="#" aria-label="Baixar Política de Privacidade e Proteção de Dados">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                Política de Privacidade e Proteção de Dados (LGPD)
+              </a>
+            </nav>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ATUAÇÃO REGULADA -->
-  <section class="section section--gray" id="atuacao">
-    <div class="container">
-      <div class="fade-up" style="max-width:760px; margin:0 auto;">
-        <span class="section-label">Atuação</span>
-        <h2 class="section-title">Atuação Regulada</h2>
-        <p style="margin-bottom:24px;">A Orvya Consultoria de Investimentos Ltda atua exclusivamente na prestação de serviços de consultoria de valores mobiliários, nos termos da regulamentação da Comissão de Valores Mobiliários (CVM).</p>
-        <p style="margin-bottom:20px; font-weight:600; color:var(--gray-800);">A empresa não realiza:</p>
-        <ul class="not-list">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Gestão de recursos
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Intermediação de valores mobiliários
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            Custódia de ativos
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content fade-up">
-        <div>
-          <h2>Dúvidas sobre regulação?</h2>
-          <p>Entre em contato conosco para mais informações.</p>
-        </div>
-        <div class="cta-buttons">
-          <a href="fale-conosco.html" class="btn btn--white btn--lg">Fale Conosco</a>
+    <!-- ATUAÇÃO REGULADA -->
+    <section class="section section--alt" id="atuacao" aria-labelledby="regulated-title">
+      <div class="container">
+        <div class="fade-up" style="max-width: 760px; margin: 0 auto;">
+          <span class="section-label">Atuação</span>
+          <h2 class="section-title" id="regulated-title">Atuação Regulada</h2>
+          <p style="margin-bottom: var(--space-5);">A Orvya Consultoria de Investimentos Ltda atua exclusivamente na prestação de serviços de consultoria de valores mobiliários, nos termos da regulamentação da Comissão de Valores Mobiliários (CVM).</p>
+          <p style="margin-bottom: var(--space-4); font-weight: 600; color: var(--color-text-primary);">A empresa não realiza:</p>
+          <ul class="not-list" role="list">
+            <li role="listitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              Gestão de recursos
+            </li>
+            <li role="listitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              Intermediação de valores mobiliários
+            </li>
+            <li role="listitem">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              Custódia de ativos
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-content fade-up">
+          <div>
+            <h2 id="cta-title">Dúvidas sobre regulação?</h2>
+            <p>Entre em contato conosco para mais informações.</p>
+          </div>
+          <div class="cta-buttons">
+            <a href="fale-conosco.html" class="btn btn--white btn--lg">Fale Conosco</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">Orvya</a>
+          <a href="index.html" class="logo" aria-label="Orvya — página inicial">Orvya</a>
           <p>Orvya Consultoria de Investimentos Ltda<br>CNPJ 65.609.925/0001-80<br>Consultoria de Valores Mobiliários registrada na CVM</p>
         </div>
         <div class="footer-col">

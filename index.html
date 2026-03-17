@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Orvya — Consultoria de investimentos independente. Planejamento e recomendações personalizadas para organizar seus investimentos com estratégia, clareza e segurança.">
   <title>Orvya | Consultoria de Investimentos Independente</title>
+
+  <!-- Fonts: Corporate Trust (Lexend + Source Sans 3) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <!-- Skip link — UX guideline #45 -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
   <!-- ========== HEADER ========== -->
-  <header class="header" id="header">
+  <header class="header" id="header" role="banner">
     <div class="container">
-      <a href="index.html" class="logo">Orvya</a>
-      <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="logo" aria-label="Orvya — página inicial">Orvya</a>
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Navegação principal">
         <a href="quem-somos.html">Quem Somos</a>
         <a href="como-funciona.html">Como Funciona</a>
         <a href="regulacao.html">Regulação</a>
@@ -25,254 +30,264 @@
           <a href="fale-conosco.html" class="btn btn--primary">Falar com especialista</a>
         </span>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- ========== HERO ========== -->
-  <section class="hero" id="hero">
-    <div class="container">
-      <div class="hero-content fade-up">
-        <span class="hero-badge">Consultoria Independente</span>
-        <h1>Consultoria de investimentos independente</h1>
-        <p>Planejamento e recomendações personalizadas para organizar seus investimentos com estratégia, clareza e segurança.</p>
-        <div class="hero-buttons">
-          <a href="fale-conosco.html" class="btn btn--primary btn--lg">
-            Falar com especialista
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+  <!-- ========== MAIN ========== -->
+  <main id="main-content">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content fade-up">
+          <span class="hero-badge">Consultoria Independente</span>
+          <h1 id="hero-title">Consultoria de investimentos independente</h1>
+          <p>Planejamento e recomendações personalizadas para organizar seus investimentos com estratégia, clareza e segurança.</p>
+          <div class="hero-buttons">
+            <a href="fale-conosco.html" class="btn btn--primary btn--lg">
+              Falar com especialista
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="como-funciona.html" class="btn btn--outline btn--lg">Como Funciona</a>
+          </div>
+        </div>
+        <div class="hero-visual fade-up delay-2">
+          <div class="hero-illustration">
+            <img src="https://illustrations.popsy.co/gray/business-analysis.svg" alt="Ilustração de análise e estratégia de investimentos" loading="eager" width="408" height="408">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== BENEFÍCIOS ========== -->
+    <section class="section section--alt" id="beneficios" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="text-center fade-up">
+          <span class="section-label">Benefícios</span>
+          <h2 class="section-title" id="benefits-title">Por que contar com uma consultoria de investimentos?</h2>
+          <p class="section-subtitle">Tomar decisões de investimento sozinho costuma gerar dúvidas, insegurança e, muitas vezes, erros que custam caro ao longo do tempo.</p>
+        </div>
+        <p class="section-subtitle text-center fade-up" style="margin-top: calc(-1 * var(--space-5));">Ao contar com uma consultoria de investimentos, você passa a ter uma visão mais estruturada sobre seu patrimônio, com decisões baseadas em estratégia e não apenas em recomendações pontuais.</p>
+
+        <div class="benefits-grid" role="list">
+          <!-- Card 1 -->
+          <article class="benefit-card fade-up delay-1" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3>Clareza nas decisões</h3>
+            <p>Compreensão mais objetiva sobre onde investir, por que investir e como cada investimento se encaixa na estratégia geral.</p>
+          </article>
+          <!-- Card 2 -->
+          <article class="benefit-card fade-up delay-2" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+            </div>
+            <h3>Estratégia alinhada à sua realidade</h3>
+            <p>A carteira de investimentos passa a refletir seus objetivos financeiros, horizonte de tempo e perfil de risco.</p>
+          </article>
+          <!-- Card 3 -->
+          <article class="benefit-card fade-up delay-3" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+            </div>
+            <h3>Proteção contra decisões impulsivas</h3>
+            <p>A presença de uma estratégia definida ajuda a evitar decisões motivadas apenas por emoções ou movimentos de curto prazo do mercado.</p>
+          </article>
+          <!-- Card 4 -->
+          <article class="benefit-card fade-up delay-4" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </div>
+            <h3>Organização e coerência da carteira</h3>
+            <p>Os investimentos deixam de ser decisões isoladas e passam a fazer parte de uma estrutura lógica de alocação.</p>
+          </article>
+          <!-- Card 5 -->
+          <article class="benefit-card fade-up delay-5" role="listitem">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+            </div>
+            <h3>Revisão e ajustes ao longo do tempo</h3>
+            <p>A carteira é acompanhada e revisada periodicamente para manter alinhamento com seus objetivos e com o cenário econômico.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COMO FUNCIONA (resumo) ========== -->
+    <section class="section" id="como-funciona" aria-labelledby="process-title">
+      <div class="container">
+        <div class="text-center fade-up">
+          <span class="section-label">Processo</span>
+          <h2 class="section-title" id="process-title">Como Funciona</h2>
+          <p class="section-subtitle">Um processo claro e estruturado para transformar seus investimentos em uma estratégia consistente.</p>
+        </div>
+
+        <div class="process-flow fade-up" role="list" aria-label="Etapas do processo">
+          <div class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">1</div>
+            <h3>Conversa inicial</h3>
+            <p>Entendimento do seu momento e objetivos</p>
+          </div>
+          <div class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">2</div>
+            <h3>Diagnóstico</h3>
+            <p>Análise da sua situação atual</p>
+          </div>
+          <div class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">3</div>
+            <h3>Estratégia</h3>
+            <p>Recomendações personalizadas</p>
+          </div>
+          <div class="process-step" role="listitem">
+            <div class="step-number" aria-hidden="true">4</div>
+            <h3>Acompanhamento</h3>
+            <p>Revisão e ajustes contínuos</p>
+          </div>
+        </div>
+
+        <div class="text-center fade-up">
+          <a href="como-funciona.html" class="btn btn--outline">
+            Saiba mais
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
-          <a href="como-funciona.html" class="btn btn--outline btn--lg">Como Funciona</a>
         </div>
       </div>
-      <div class="hero-visual fade-up delay-2">
-        <div class="hero-illustration">
-          <img src="https://illustrations.popsy.co/gray/business-analysis.svg" alt="Consultoria de investimentos">
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== BENEFÍCIOS ========== -->
-  <section class="section section--gray" id="beneficios">
-    <div class="container">
-      <div class="text-center fade-up">
-        <span class="section-label">Benefícios</span>
-        <h2 class="section-title">Por que contar com uma consultoria de investimentos?</h2>
-        <p class="section-subtitle">Tomar decisões de investimento sozinho costuma gerar dúvidas, insegurança e, muitas vezes, erros que custam caro ao longo do tempo.</p>
-      </div>
-      <p class="section-subtitle text-center fade-up" style="margin-top:-24px;">Ao contar com uma consultoria de investimentos, você passa a ter uma visão mais estruturada sobre seu patrimônio, com decisões baseadas em estratégia e não apenas em recomendações pontuais.</p>
-
-      <div class="benefits-grid">
-        <!-- Card 1 -->
-        <div class="benefit-card fade-up delay-1">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-          </div>
-          <h3>Clareza nas decisões</h3>
-          <p>Compreensão mais objetiva sobre onde investir, por que investir e como cada investimento se encaixa na estratégia geral.</p>
-        </div>
-        <!-- Card 2 -->
-        <div class="benefit-card fade-up delay-2">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
-          </div>
-          <h3>Estratégia alinhada à sua realidade</h3>
-          <p>A carteira de investimentos passa a refletir seus objetivos financeiros, horizonte de tempo e perfil de risco.</p>
-        </div>
-        <!-- Card 3 -->
-        <div class="benefit-card fade-up delay-3">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-          </div>
-          <h3>Proteção contra decisões impulsivas</h3>
-          <p>A presença de uma estratégia definida ajuda a evitar decisões motivadas apenas por emoções ou movimentos de curto prazo do mercado.</p>
-        </div>
-        <!-- Card 4 -->
-        <div class="benefit-card fade-up delay-4">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-          </div>
-          <h3>Organização e coerência da carteira</h3>
-          <p>Os investimentos deixam de ser decisões isoladas e passam a fazer parte de uma estrutura lógica de alocação.</p>
-        </div>
-        <!-- Card 5 -->
-        <div class="benefit-card fade-up delay-5">
-          <div class="icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
-          </div>
-          <h3>Revisão e ajustes ao longo do tempo</h3>
-          <p>A carteira é acompanhada e revisada periodicamente para manter alinhamento com seus objetivos e com o cenário econômico.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== COMO FUNCIONA (resumo) ========== -->
-  <section class="section" id="como-funciona">
-    <div class="container">
-      <div class="text-center fade-up">
-        <span class="section-label">Processo</span>
-        <h2 class="section-title">Como Funciona</h2>
-        <p class="section-subtitle">Um processo claro e estruturado para transformar seus investimentos em uma estratégia consistente.</p>
-      </div>
-
-      <div class="process-flow fade-up">
-        <div class="process-step">
-          <div class="step-number">1</div>
-          <h3>Conversa inicial</h3>
-          <p>Entendimento do seu momento e objetivos</p>
-        </div>
-        <div class="process-step">
-          <div class="step-number">2</div>
-          <h3>Diagnóstico</h3>
-          <p>Análise da sua situação atual</p>
-        </div>
-        <div class="process-step">
-          <div class="step-number">3</div>
-          <h3>Estratégia</h3>
-          <p>Recomendações personalizadas</p>
-        </div>
-        <div class="process-step">
-          <div class="step-number">4</div>
-          <h3>Acompanhamento</h3>
-          <p>Revisão e ajustes contínuos</p>
-        </div>
-      </div>
-
-      <div class="text-center fade-up">
-        <a href="como-funciona.html" class="btn btn--outline">
-          Saiba mais
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PARA QUEM É ========== -->
-  <section class="section section--gray" id="para-quem">
-    <div class="container">
-      <div class="audience-grid">
-        <div class="fade-up">
-          <span class="section-label">Para quem é</span>
-          <h2 class="section-title">Para quem é a Orvya</h2>
-          <p class="section-subtitle">A consultoria é indicada para pessoas que:</p>
-          <div class="audience-list">
-            <div class="audience-item">
-              <div class="check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+    <!-- ========== PARA QUEM É ========== -->
+    <section class="section section--alt" id="para-quem" aria-labelledby="audience-title">
+      <div class="container">
+        <div class="audience-grid">
+          <div class="fade-up">
+            <span class="section-label">Para quem é</span>
+            <h2 class="section-title" id="audience-title">Para quem é a Orvya</h2>
+            <p class="section-subtitle">A consultoria é indicada para pessoas que:</p>
+            <div class="audience-list" role="list">
+              <div class="audience-item" role="listitem">
+                <div class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p>Desejam investir com estratégia e visão de longo prazo</p>
               </div>
-              <p>Desejam investir com estratégia e visão de longo prazo</p>
-            </div>
-            <div class="audience-item">
-              <div class="check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="audience-item" role="listitem">
+                <div class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p>Já possuem investimentos e querem mais organização</p>
               </div>
-              <p>Já possuem investimentos e querem mais organização</p>
-            </div>
-            <div class="audience-item">
-              <div class="check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="audience-item" role="listitem">
+                <div class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p>Preferem orientação independente, sem conflito de interesses</p>
               </div>
-              <p>Preferem orientação independente, sem conflito de interesses</p>
-            </div>
-            <div class="audience-item">
-              <div class="check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div class="audience-item" role="listitem">
+                <div class="check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p>Buscam clareza para tomar decisões financeiras</p>
               </div>
-              <p>Buscam clareza para tomar decisões financeiras</p>
+            </div>
+            <div class="audience-note">
+              <p>A consultoria é especialmente útil para quem deseja transformar investimentos isolados em uma estratégia consistente de construção de patrimônio.</p>
             </div>
           </div>
-          <div class="audience-note">
-            <p>A consultoria é especialmente útil para quem deseja transformar investimentos isolados em uma estratégia consistente de construção de patrimônio.</p>
+          <div class="audience-image fade-up delay-2">
+            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=450&fit=crop&q=80" alt="Pessoa analisando gráficos de investimentos em um computador" loading="lazy" width="600" height="450">
           </div>
         </div>
-        <div class="audience-image fade-up delay-2">
-          <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=450&fit=crop&q=80" alt="Planejamento financeiro">
+      </div>
+    </section>
+
+    <!-- ========== TRANSPARÊNCIA ========== -->
+    <section class="section section--dark" id="transparencia" aria-labelledby="transparency-title">
+      <div class="container">
+        <div class="text-center fade-up">
+          <span class="section-label">Transparência</span>
+          <h2 class="section-title" id="transparency-title">Independência total</h2>
+          <p class="section-subtitle" style="color: #bbbbbb;">A Orvya não possui nenhum tipo de vínculo com bancos, corretoras, gestoras ou outras instituições financeiras. Nossas indicações não são comissionadas e todo o nosso aconselhamento é unicamente voltado para trazer o melhor benefício para os clientes.</p>
+        </div>
+
+        <div class="transparency-grid" role="list">
+          <div class="transparency-card fade-up delay-1" role="listitem">
+            <div class="number">01</div>
+            <h3>Zero conflito de interesse</h3>
+            <p>Atuação independente, focada exclusivamente no interesse do cliente.</p>
+          </div>
+          <div class="transparency-card fade-up delay-2" role="listitem">
+            <div class="number">02</div>
+            <h3>Sem comissionamento</h3>
+            <p>Sem comissionamento pela indicação de ativos financeiros.</p>
+          </div>
+          <div class="transparency-card fade-up delay-3" role="listitem">
+            <div class="number">03</div>
+            <h3>Sem taxas ocultas</h3>
+            <p>Nossa remuneração vem exclusivamente dos nossos clientes, que sabem quanto estão pagando pelo serviço.</p>
+          </div>
+          <div class="transparency-card fade-up delay-4" role="listitem">
+            <div class="number">04</div>
+            <h3>Aconselhamento individual</h3>
+            <p>Baseado em estratégias claras que respeitam o perfil de risco do investidor e adequação aos objetivos financeiros.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== TRANSPARÊNCIA ========== -->
-  <section class="section section--dark" id="transparencia">
-    <div class="container">
-      <div class="text-center fade-up">
-        <span class="section-label">Transparência</span>
-        <h2 class="section-title">Independência total</h2>
-        <p class="section-subtitle" style="color:var(--gray-400);">A Orvya não possui nenhum tipo de vínculo com bancos, corretoras, gestoras ou outras instituições financeiras. Nossas indicações não são comissionadas e todo o nosso aconselhamento é unicamente voltado para trazer o melhor benefício para os clientes.</p>
-      </div>
+    <!-- ========== CTA ========== -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-content fade-up">
+          <div>
+            <h2 id="cta-title">Quer investir com estratégia?</h2>
+            <p>Entre em contato e agende uma conversa com nossos especialistas.</p>
+          </div>
+          <div class="cta-buttons">
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="btn btn--white btn--lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              Agendar conversa
+            </a>
+            <a href="fale-conosco.html" class="btn btn--outline btn--lg" style="border-color: var(--color-text-inverse); color: var(--color-text-inverse);">Preencher formulário</a>
+          </div>
 
-      <div class="transparency-grid">
-        <div class="transparency-card fade-up delay-1">
-          <div class="number">01</div>
-          <h3>Zero conflito de interesse</h3>
-          <p>Atuação independente, focada exclusivamente no interesse do cliente.</p>
-        </div>
-        <div class="transparency-card fade-up delay-2">
-          <div class="number">02</div>
-          <h3>Sem comissionamento</h3>
-          <p>Sem comissionamento pela indicação de ativos financeiros.</p>
-        </div>
-        <div class="transparency-card fade-up delay-3">
-          <div class="number">03</div>
-          <h3>Sem taxas ocultas</h3>
-          <p>Nossa remuneração vem exclusivamente dos nossos clientes, que sabem quanto estão pagando pelo serviço.</p>
-        </div>
-        <div class="transparency-card fade-up delay-4">
-          <div class="number">04</div>
-          <h3>Aconselhamento individual</h3>
-          <p>Baseado em estratégias claras que respeitam o perfil de risco do investidor e adequação aos objetivos financeiros.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CTA ========== -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content fade-up">
-        <div>
-          <h2>Quer investir com estratégia?</h2>
-          <p>Entre em contato e agende uma conversa com nossos especialistas.</p>
-        </div>
-        <div class="cta-buttons">
-          <a href="https://wa.me/5500000000000" target="_blank" class="btn btn--white btn--lg">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            Agendar conversa
-          </a>
-          <a href="fale-conosco.html" class="btn btn--outline btn--lg" style="border-color:var(--white);color:var(--white);">Preencher formulário</a>
-        </div>
-
-        <div class="form-card">
-          <h3>Deixe seus dados</h3>
-          <form id="ctaForm" onsubmit="return false;">
-            <div class="form-group">
-              <label for="ctaNome">Nome</label>
-              <input type="text" id="ctaNome" placeholder="Seu nome completo" required>
+          <div class="form-card">
+            <h3>Deixe seus dados</h3>
+            <form id="ctaForm" novalidate>
+              <div class="form-group">
+                <label for="ctaNome">Nome <span class="required" aria-label="obrigatório">*</span></label>
+                <input type="text" id="ctaNome" name="nome" placeholder="Seu nome completo" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="ctaEmail">Email <span class="required" aria-label="obrigatório">*</span></label>
+                <input type="email" id="ctaEmail" name="email" placeholder="seu@email.com" required autocomplete="email" inputmode="email">
+              </div>
+              <div class="form-group">
+                <label for="ctaTelefone">Telefone <span class="required" aria-label="obrigatório">*</span></label>
+                <input type="tel" id="ctaTelefone" name="telefone" placeholder="(00) 00000-0000" required autocomplete="tel" inputmode="tel">
+              </div>
+              <button type="submit" class="btn btn--primary">Agendar conversa</button>
+            </form>
+            <div class="form-success" role="alert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              <h3>Enviado com sucesso!</h3>
+              <p>Entraremos em contato em breve.</p>
             </div>
-            <div class="form-group">
-              <label for="ctaEmail">Email</label>
-              <input type="email" id="ctaEmail" placeholder="seu@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="ctaTelefone">Telefone</label>
-              <input type="tel" id="ctaTelefone" placeholder="(00) 00000-0000" required>
-            </div>
-            <button type="submit" class="btn btn--primary">Agendar conversa</button>
-          </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- ========== FOOTER ========== -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">Orvya</a>
+          <a href="index.html" class="logo" aria-label="Orvya — página inicial">Orvya</a>
           <p>Orvya Consultoria de Investimentos Ltda<br>CNPJ 65.609.925/0001-80<br>Consultoria de Valores Mobiliários registrada na CVM</p>
         </div>
         <div class="footer-col">

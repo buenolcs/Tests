@@ -7,17 +7,19 @@
   <title>Quem Somos | Orvya</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
   <!-- HEADER -->
-  <header class="header" id="header">
+  <header class="header" id="header" role="banner">
     <div class="container">
-      <a href="index.html" class="logo">Orvya</a>
-      <nav class="nav-links" id="navLinks">
-        <a href="quem-somos.html" class="active">Quem Somos</a>
+      <a href="index.html" class="logo" aria-label="Orvya — página inicial">Orvya</a>
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Navegação principal">
+        <a href="quem-somos.html" class="active" aria-current="page">Quem Somos</a>
         <a href="como-funciona.html">Como Funciona</a>
         <a href="regulacao.html">Regulação</a>
         <a href="fale-conosco.html">Fale Conosco</a>
@@ -25,138 +27,142 @@
           <a href="fale-conosco.html" class="btn btn--primary">Falar com especialista</a>
         </span>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <div class="container fade-up">
-      <span class="section-label">Sobre nós</span>
-      <h1>Quem Somos</h1>
-      <p>Consultoria de investimentos independente dedicada a ajudar pessoas a tomar decisões mais claras e investir com estratégia.</p>
-    </div>
-  </section>
+  <main id="main-content">
 
-  <!-- NOSSA PROPOSTA -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center fade-up">
-        <span class="section-label">Nossa proposta</span>
-        <h2 class="section-title">O significado por trás do nome</h2>
-        <p class="section-subtitle">A Orvya é uma consultoria de investimentos independente dedicada a ajudar pessoas a tomar decisões mais claras e investir com estratégia e alinhamento aos objetivos. O nome da empresa reflete os princípios que orientam a nossa atuação.</p>
+    <!-- PAGE HEADER -->
+    <section class="page-header" aria-labelledby="page-title">
+      <div class="container fade-up">
+        <span class="section-label">Sobre nós</span>
+        <h1 id="page-title">Quem Somos</h1>
+        <p>Consultoria de investimentos independente dedicada a ajudar pessoas a tomar decisões mais claras e investir com estratégia.</p>
       </div>
+    </section>
 
-      <div class="values-grid">
-        <div class="value-card fade-up delay-1">
-          <div class="value-letter">O</div>
-          <h3>Objetivo</h3>
-          <p>Clareza sobre o que se deseja alcançar.</p>
+    <!-- NOSSA PROPOSTA -->
+    <section class="section" aria-labelledby="values-title">
+      <div class="container">
+        <div class="text-center fade-up">
+          <span class="section-label">Nossa proposta</span>
+          <h2 class="section-title" id="values-title">O significado por trás do nome</h2>
+          <p class="section-subtitle">A Orvya é uma consultoria de investimentos independente dedicada a ajudar pessoas a tomar decisões mais claras e investir com estratégia e alinhamento aos objetivos. O nome da empresa reflete os princípios que orientam a nossa atuação.</p>
         </div>
-        <div class="value-card fade-up delay-2">
-          <div class="value-letter">R</div>
-          <h3>Rumo</h3>
-          <p>Direção definida, baseada em planejamento e análise.</p>
-        </div>
-        <div class="value-card fade-up delay-3">
-          <div class="value-letter">VY</div>
-          <h3>Visão</h3>
-          <p>Capacidade de compreender o contexto econômico e financeiro de longo prazo.</p>
-        </div>
-        <div class="value-card fade-up delay-4">
-          <div class="value-letter">A</div>
-          <h3>Ação</h3>
-          <p>Transformação de objetivos e estratégias em decisões práticas e executáveis.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- FORMA DE ATUAÇÃO -->
-  <section class="section section--gray">
-    <div class="container">
-      <div class="text-center fade-up">
-        <span class="section-label">Nossa forma de atuação</span>
-        <h2 class="section-title">Princípios fundamentais</h2>
-        <p class="section-subtitle">A atuação da Orvya é baseada em princípios que garantem qualidade e confiança no serviço prestado.</p>
-      </div>
-
-      <div class="principles-grid">
-        <div class="principle-card fade-up delay-1">
-          <h3>Independência</h3>
-          <p>A consultoria é focada na análise e recomendação de investimentos, sem atuação em intermediação ou distribuição de produtos financeiros.</p>
-        </div>
-        <div class="principle-card fade-up delay-2">
-          <h3>Recomendações personalizadas</h3>
-          <p>Cada estratégia é única, construída considerando os objetivos, o perfil de risco e a situação patrimonial do investidor.</p>
-        </div>
-        <div class="principle-card fade-up delay-3">
-          <h3>Clareza na comunicação</h3>
-          <p>Buscamos explicar as estratégias e recomendações de forma clara e acessível, permitindo que o investidor compreenda as decisões relacionadas ao seu patrimônio.</p>
-        </div>
-        <div class="principle-card fade-up delay-4">
-          <h3>Foco no longo prazo</h3>
-          <p>As estratégias são estruturadas com base em visão de longo prazo e construção consistente de patrimônio.</p>
-        </div>
-        <div class="principle-card fade-up delay-5">
-          <h3>Governança e responsabilidade</h3>
-          <p>A Orvya atua como consultoria de valores mobiliários, seguindo as normas estabelecidas pela Comissão de Valores Mobiliários (CVM).</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SÓCIOS -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center fade-up">
-        <span class="section-label">Equipe</span>
-        <h2 class="section-title">Sócios</h2>
-        <p class="section-subtitle">Conheça os profissionais por trás da Orvya.</p>
-      </div>
-
-      <div class="team-grid">
-        <div class="team-card fade-up delay-1">
-          <div class="team-avatar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <div class="values-grid" role="list">
+          <div class="value-card fade-up delay-1" role="listitem">
+            <div class="value-letter" aria-hidden="true">O</div>
+            <h3>Objetivo</h3>
+            <p>Clareza sobre o que se deseja alcançar.</p>
           </div>
-          <h3>Igor</h3>
-          <p>Sócio-fundador</p>
-        </div>
-        <div class="team-card fade-up delay-2">
-          <div class="team-avatar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <div class="value-card fade-up delay-2" role="listitem">
+            <div class="value-letter" aria-hidden="true">R</div>
+            <h3>Rumo</h3>
+            <p>Direção definida, baseada em planejamento e análise.</p>
           </div>
-          <h3>Matheus</h3>
-          <p>Sócio-fundador</p>
+          <div class="value-card fade-up delay-3" role="listitem">
+            <div class="value-letter" aria-hidden="true">VY</div>
+            <h3>Visão</h3>
+            <p>Capacidade de compreender o contexto econômico e financeiro de longo prazo.</p>
+          </div>
+          <div class="value-card fade-up delay-4" role="listitem">
+            <div class="value-letter" aria-hidden="true">A</div>
+            <h3>Ação</h3>
+            <p>Transformação de objetivos e estratégias em decisões práticas e executáveis.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content fade-up">
-        <div>
-          <h2>Quer investir com estratégia?</h2>
-          <p>Agende uma conversa e conheça nossa consultoria.</p>
+    <!-- FORMA DE ATUAÇÃO -->
+    <section class="section section--alt" aria-labelledby="principles-title">
+      <div class="container">
+        <div class="text-center fade-up">
+          <span class="section-label">Nossa forma de atuação</span>
+          <h2 class="section-title" id="principles-title">Princípios fundamentais</h2>
+          <p class="section-subtitle">A atuação da Orvya é baseada em princípios que garantem qualidade e confiança no serviço prestado.</p>
         </div>
-        <div class="cta-buttons">
-          <a href="fale-conosco.html" class="btn btn--white btn--lg">Falar com especialista</a>
+
+        <div class="principles-grid">
+          <article class="principle-card fade-up delay-1">
+            <h3>Independência</h3>
+            <p>A consultoria é focada na análise e recomendação de investimentos, sem atuação em intermediação ou distribuição de produtos financeiros.</p>
+          </article>
+          <article class="principle-card fade-up delay-2">
+            <h3>Recomendações personalizadas</h3>
+            <p>Cada estratégia é única, construída considerando os objetivos, o perfil de risco e a situação patrimonial do investidor.</p>
+          </article>
+          <article class="principle-card fade-up delay-3">
+            <h3>Clareza na comunicação</h3>
+            <p>Buscamos explicar as estratégias e recomendações de forma clara e acessível, permitindo que o investidor compreenda as decisões relacionadas ao seu patrimônio.</p>
+          </article>
+          <article class="principle-card fade-up delay-4">
+            <h3>Foco no longo prazo</h3>
+            <p>As estratégias são estruturadas com base em visão de longo prazo e construção consistente de patrimônio.</p>
+          </article>
+          <article class="principle-card fade-up delay-5">
+            <h3>Governança e responsabilidade</h3>
+            <p>A Orvya atua como consultoria de valores mobiliários, seguindo as normas estabelecidas pela Comissão de Valores Mobiliários (CVM).</p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- SÓCIOS -->
+    <section class="section" aria-labelledby="team-title">
+      <div class="container">
+        <div class="text-center fade-up">
+          <span class="section-label">Equipe</span>
+          <h2 class="section-title" id="team-title">Sócios</h2>
+          <p class="section-subtitle">Conheça os profissionais por trás da Orvya.</p>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card fade-up delay-1">
+            <div class="team-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3>Igor</h3>
+            <p>Sócio-fundador</p>
+          </div>
+          <div class="team-card fade-up delay-2">
+            <div class="team-avatar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3>Matheus</h3>
+            <p>Sócio-fundador</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-content fade-up">
+          <div>
+            <h2 id="cta-title">Quer investir com estratégia?</h2>
+            <p>Agende uma conversa e conheça nossa consultoria.</p>
+          </div>
+          <div class="cta-buttons">
+            <a href="fale-conosco.html" class="btn btn--white btn--lg">Falar com especialista</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">Orvya</a>
+          <a href="index.html" class="logo" aria-label="Orvya — página inicial">Orvya</a>
           <p>Orvya Consultoria de Investimentos Ltda<br>CNPJ 65.609.925/0001-80<br>Consultoria de Valores Mobiliários registrada na CVM</p>
         </div>
         <div class="footer-col">

@@ -7,128 +7,144 @@
   <title>Fale Conosco | Orvya</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
   <!-- HEADER -->
-  <header class="header" id="header">
+  <header class="header" id="header" role="banner">
     <div class="container">
-      <a href="index.html" class="logo">Orvya</a>
-      <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="logo" aria-label="Orvya — página inicial">Orvya</a>
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Navegação principal">
         <a href="quem-somos.html">Quem Somos</a>
         <a href="como-funciona.html">Como Funciona</a>
         <a href="regulacao.html">Regulação</a>
-        <a href="fale-conosco.html" class="active">Fale Conosco</a>
+        <a href="fale-conosco.html" class="active" aria-current="page">Fale Conosco</a>
         <span class="nav-cta">
           <a href="fale-conosco.html" class="btn btn--primary">Falar com especialista</a>
         </span>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <div class="container fade-up">
-      <span class="section-label">Contato</span>
-      <h1>Fale Conosco</h1>
-      <p>Se você deseja entender melhor como funciona a consultoria de investimentos, entre em contato conosco.</p>
-    </div>
-  </section>
+  <main id="main-content">
 
-  <!-- CONTATO -->
-  <section class="section">
-    <div class="container">
-      <div class="contact-grid">
-        <div class="contact-info fade-up">
-          <h2>Vamos conversar?</h2>
-          <p>Preencha o formulário ao lado ou entre em contato pelos canais abaixo. Estamos prontos para ajudar você a organizar seus investimentos com estratégia e clareza.</p>
+    <!-- PAGE HEADER -->
+    <section class="page-header" aria-labelledby="page-title">
+      <div class="container fade-up">
+        <span class="section-label">Contato</span>
+        <h1 id="page-title">Fale Conosco</h1>
+        <p>Se você deseja entender melhor como funciona a consultoria de investimentos, entre em contato conosco.</p>
+      </div>
+    </section>
 
-          <div class="contact-channels">
-            <div class="contact-channel">
-              <div class="icon-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    <!-- CONTATO -->
+    <section class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info fade-up">
+            <h2 id="contact-title">Vamos conversar?</h2>
+            <p>Preencha o formulário ao lado ou entre em contato pelos canais abaixo. Estamos prontos para ajudar você a organizar seus investimentos com estratégia e clareza.</p>
+
+            <div class="contact-channels">
+              <div class="contact-channel">
+                <div class="icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div>
+                  <h4>Email</h4>
+                  <p><a href="mailto:contato@orvyainvestimentos.com.br" style="color: var(--color-text-primary); font-weight: 600;">contato@orvyainvestimentos.com.br</a></p>
+                </div>
               </div>
-              <div>
-                <h4>Email</h4>
-                <p>contato@orvyainvestimentos.com.br</p>
+              <div class="contact-channel">
+                <div class="icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </div>
+                <div>
+                  <h4>WhatsApp</h4>
+                  <p><a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" style="color: var(--color-text-primary); font-weight: 600;">Clique aqui para conversar</a></p>
+                </div>
               </div>
             </div>
-            <div class="contact-channel">
-              <div class="icon-circle">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-              </div>
-              <div>
-                <h4>WhatsApp</h4>
-                <p><a href="https://wa.me/5500000000000" target="_blank" style="color:var(--black); font-weight:600;">Clique aqui para conversar</a></p>
+
+            <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg" style="width: 100%; max-width: 320px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              Fale conosco pelo WhatsApp
+            </a>
+
+            <!-- LEAD MAGNET -->
+            <div class="lead-magnet">
+              <h3>Material educativo gratuito</h3>
+              <p>Baixe nosso guia: <strong>"Organizando seus investimentos"</strong></p>
+              <form id="leadForm" novalidate>
+                <div class="form-group">
+                  <label for="leadNome">Nome <span class="required" aria-label="obrigatório">*</span></label>
+                  <input type="text" id="leadNome" name="nome" placeholder="Seu nome" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label for="leadEmail">Email <span class="required" aria-label="obrigatório">*</span></label>
+                  <input type="email" id="leadEmail" name="email" placeholder="seu@email.com" required autocomplete="email" inputmode="email">
+                </div>
+                <div class="form-group">
+                  <label for="leadTelefone">Telefone <span class="required" aria-label="obrigatório">*</span></label>
+                  <input type="tel" id="leadTelefone" name="telefone" placeholder="(00) 00000-0000" required autocomplete="tel" inputmode="tel">
+                </div>
+                <button type="submit" class="btn btn--outline" style="width: 100%;">Baixar material</button>
+              </form>
+              <div class="form-success" role="alert">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                <h3>Download iniciado!</h3>
+                <p>Verifique seu email para acessar o material.</p>
               </div>
             </div>
           </div>
 
-          <a href="https://wa.me/5500000000000" target="_blank" class="btn btn--primary btn--lg" style="width:100%; max-width:320px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            Fale conosco pelo WhatsApp
-          </a>
-
-          <!-- LEAD MAGNET -->
-          <div class="lead-magnet">
-            <h3>Material educativo gratuito</h3>
-            <p>Baixe nosso guia: <strong>"Organizando seus investimentos"</strong></p>
-            <form id="leadForm" onsubmit="return false;">
+          <!-- FORMULÁRIO PRINCIPAL -->
+          <div class="form-card fade-up delay-2" style="background: var(--color-bg-alt); border: 1px solid var(--color-border);">
+            <h3>Agende uma conversa</h3>
+            <form id="contactForm" novalidate>
               <div class="form-group">
-                <label for="leadNome">Nome</label>
-                <input type="text" id="leadNome" placeholder="Seu nome" required>
+                <label for="contactNome">Nome <span class="required" aria-label="obrigatório">*</span></label>
+                <input type="text" id="contactNome" name="nome" placeholder="Seu nome completo" required autocomplete="name">
               </div>
               <div class="form-group">
-                <label for="leadEmail">Email</label>
-                <input type="email" id="leadEmail" placeholder="seu@email.com" required>
+                <label for="contactEmail">Email <span class="required" aria-label="obrigatório">*</span></label>
+                <input type="email" id="contactEmail" name="email" placeholder="seu@email.com" required autocomplete="email" inputmode="email">
               </div>
               <div class="form-group">
-                <label for="leadTelefone">Telefone</label>
-                <input type="tel" id="leadTelefone" placeholder="(00) 00000-0000" required>
+                <label for="contactTelefone">Telefone <span class="required" aria-label="obrigatório">*</span></label>
+                <input type="tel" id="contactTelefone" name="telefone" placeholder="(00) 00000-0000" required autocomplete="tel" inputmode="tel">
               </div>
-              <button type="submit" class="btn btn--outline" style="width:100%;">Baixar material</button>
+              <div class="form-group">
+                <label for="contactMensagem">Mensagem (opcional)</label>
+                <textarea id="contactMensagem" name="mensagem" placeholder="Conte um pouco sobre seu momento e seus objetivos de investimento..."></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary">Agendar conversa</button>
             </form>
+            <div class="form-success" role="alert">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+              <h3>Mensagem enviada!</h3>
+              <p>Entraremos em contato em breve.</p>
+            </div>
           </div>
-        </div>
-
-        <!-- FORMULÁRIO PRINCIPAL -->
-        <div class="form-card fade-up delay-2" style="background: var(--gray-50); border: 1px solid var(--gray-200);">
-          <h3>Agende uma conversa</h3>
-          <form id="contactForm" onsubmit="return false;">
-            <div class="form-group">
-              <label for="contactNome">Nome</label>
-              <input type="text" id="contactNome" placeholder="Seu nome completo" required>
-            </div>
-            <div class="form-group">
-              <label for="contactEmail">Email</label>
-              <input type="email" id="contactEmail" placeholder="seu@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="contactTelefone">Telefone</label>
-              <input type="tel" id="contactTelefone" placeholder="(00) 00000-0000" required>
-            </div>
-            <div class="form-group">
-              <label for="contactMensagem">Mensagem (opcional)</label>
-              <textarea id="contactMensagem" placeholder="Conte um pouco sobre seu momento e seus objetivos de investimento..."></textarea>
-            </div>
-            <button type="submit" class="btn btn--primary">Agendar conversa</button>
-          </form>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo">Orvya</a>
+          <a href="index.html" class="logo" aria-label="Orvya — página inicial">Orvya</a>
           <p>Orvya Consultoria de Investimentos Ltda<br>CNPJ 65.609.925/0001-80<br>Consultoria de Valores Mobiliários registrada na CVM</p>
         </div>
         <div class="footer-col">
