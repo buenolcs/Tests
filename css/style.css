@@ -1429,6 +1429,201 @@ p {
   margin-bottom: var(--space-3);
 }
 
+/* ---------- Social Proof Strip ---------- */
+.social-proof-strip {
+  padding: var(--space-5) 0;
+  background: var(--color-text-primary);
+  border-bottom: 1px solid #222222;
+}
+
+.proof-items {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-7);
+  flex-wrap: wrap;
+}
+
+.proof-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text-inverse);
+}
+
+.proof-item svg {
+  flex-shrink: 0;
+  stroke: #999999;
+}
+
+.proof-item strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text-inverse);
+}
+
+.proof-item span {
+  font-size: var(--text-xs);
+  color: #999999;
+}
+
+@media (max-width: 768px) {
+  .proof-items {
+    flex-direction: column;
+    gap: var(--space-4);
+    align-items: flex-start;
+  }
+}
+
+/* ---------- Split Content (text + image side by side) ---------- */
+.split-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+  align-items: center;
+  margin-bottom: var(--space-7);
+}
+
+.split-content--dark .split-text p {
+  color: #bbbbbb;
+}
+
+.split-content--dark .section-label {
+  color: #999999;
+}
+
+.split-text {
+  max-width: 560px;
+}
+
+.split-text p {
+  margin-bottom: var(--space-3);
+}
+
+.split-image {
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.split-image:hover img {
+  transform: scale(1.03);
+}
+
+.split-image--rounded {
+  border-radius: var(--border-radius-xl);
+  border: 1px solid #333333;
+}
+
+@media (max-width: 1024px) {
+  .split-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .split-image {
+    max-height: 320px;
+  }
+}
+
+/* ---------- Process Visual (with background image) ---------- */
+.process-visual {
+  position: relative;
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  padding: var(--space-8) var(--space-5);
+}
+
+.process-visual-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.process-visual-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.process-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.88);
+}
+
+.process-visual .process-flow {
+  position: relative;
+  z-index: var(--z-base);
+  margin-bottom: 0;
+}
+
+.process-visual .process-step h3 {
+  color: var(--color-text-inverse);
+}
+
+.process-visual .process-step p {
+  color: #bbbbbb;
+}
+
+.process-visual .step-number {
+  background: var(--color-text-inverse);
+  color: var(--color-text-primary);
+}
+
+.process-visual .process-step:not(:last-child)::after {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ---------- CTA with Background Image ---------- */
+.cta-section--with-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-bg-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.cta-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.cta-section--with-bg .container {
+  position: relative;
+  z-index: var(--z-base);
+}
+
+/* ---------- Audience image taller ---------- */
+.audience-image {
+  aspect-ratio: 3 / 4;
+}
+
+@media (max-width: 1024px) {
+  .audience-image {
+    aspect-ratio: 4 / 3;
+    max-height: 350px;
+  }
+}
+
 /* ---------- Animations ---------- */
 /* Animate 1-2 key elements per view max — UX guideline #7 */
 /* Duration 150-300ms — UX guideline #8 */
